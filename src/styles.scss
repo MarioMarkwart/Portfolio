@@ -1,12 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Anta";
+    src: url("/font/Anta-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url("/font/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 700;
+}
+
+@font-face {
+    font-family: "JosefinSansItalic";
+    src: url("/font/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 100 700;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {}
-
+:root {
+    --clr-bg: #262E34;
+    --clr-primary: #89BCD9;
+    --clr-secondary: #F8F5EC;
+    --clr-inactive: #262E341F;
+    --clr-error: #E44C36;
+    --clr-done: #97E163;
+    --clr-hover: #3f454a;
+}
 
 html {
     scrollbar-gutter: stable;
@@ -14,4 +43,6 @@ html {
 
 body {
     min-height: 100svh;
+    background-color: var(--clr-bg);
+    color: var(--clr-secondary);
 }

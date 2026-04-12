@@ -1,0 +1,88 @@
+:host {
+  display: inline-block;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button--horizontal {
+  width: 134px;
+  height: 48px;
+}
+
+.button--vertical {
+  width: 38px;
+  height: 89px;
+}
+
+.button__bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.button__fill {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
+}
+
+.button__stroke {
+  fill: none;
+  stroke: #89bcd9;
+}
+
+.button__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  pointer-events: none;
+}
+
+.button--vertical .button__content {
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 0;
+}
+
+.button__label {
+  color: #89bcd9;
+  line-height: 1;
+  white-space: nowrap;
+  font: inherit;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__icon svg {
+  display: block;
+}
+
+.button__icon path {
+  fill: #89bcd9;
+}
+
+.button:hover .button__fill {
+  fill: #3f454a;
+}
+
+.button:focus-visible {
+  outline: none;
+}

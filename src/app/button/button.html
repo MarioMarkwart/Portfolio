@@ -1,0 +1,215 @@
+@if (link) {
+  <a
+    class="button"
+    [class.button--horizontal]="variant === 'horizontal'"
+    [class.button--vertical]="variant === 'vertical'"
+    [attr.href]="link"
+    [attr.target]="target"
+    [attr.rel]="target === '_blank' ? 'noopener noreferrer' : null"
+    [attr.aria-label]="computedAriaLabel"
+  >
+    @switch (variant) {
+      @case ('horizontal') {
+        <svg
+          class="button__bg"
+          width="134"
+          height="48"
+          viewBox="0 0 134 48"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            class="button__fill"
+            x="0.5"
+            y="0.5"
+            width="133"
+            height="47"
+            rx="23.5"
+          />
+          <rect
+            class="button__stroke"
+            x="0.5"
+            y="0.5"
+            width="133"
+            height="47"
+            rx="23.5"
+          />
+        </svg>
+      }
+
+      @case ('vertical') {
+        <svg
+          class="button__bg"
+          width="38"
+          height="89"
+          viewBox="0 0 38 89"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            class="button__fill"
+            x="0.5"
+            y="0.5"
+            width="37"
+            height="88"
+            rx="18.5"
+          />
+          <rect
+            class="button__stroke"
+            x="0.5"
+            y="0.5"
+            width="37"
+            height="88"
+            rx="18.5"
+          />
+        </svg>
+      }
+    }
+
+    <span class="button__content">
+      @if (icon) {
+        <span class="button__icon" aria-hidden="true">
+          @switch (icon) {
+            @case ('arrow-down') {
+              <svg
+                width="22"
+                height="50"
+                viewBox="0 0 22 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.8284 45.0634L18.7407 38.7604C19.1224 38.4123 19.7065 38.4123 20.0883 38.7604L20.6039 39.2306C21.0388 39.6272 21.0388 40.3118 20.6039 40.7084L11.088 49.3856C10.7062 49.7337 10.1222 49.7337 9.74039 49.3856L0.224551 40.7084C-0.210388 40.3118 -0.210388 39.6272 0.224551 39.2306L0.740163 38.7604C1.12191 38.4123 1.706 38.4123 2.08775 38.7604L9 45.0634V1C9 0.447715 9.44772 0 10 0H10.8284C11.3807 0 11.8284 0.447715 11.8284 1V45.0634Z"
+                />
+              </svg>
+            }
+
+            @case ('chat') {
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 5H20V15H8L4 19V5Z"
+                />
+              </svg>
+            }
+          }
+        </span>
+      }
+
+      @if (text) {
+        <span class="button__label">{{ text }}</span>
+      }
+    </span>
+  </a>
+} @else {
+  <button
+    class="button"
+    [class.button--horizontal]="variant === 'horizontal'"
+    [class.button--vertical]="variant === 'vertical'"
+    [attr.aria-label]="computedAriaLabel"
+    type="button"
+  >
+    @switch (variant) {
+      @case ('horizontal') {
+        <svg
+          class="button__bg"
+          width="134"
+          height="48"
+          viewBox="0 0 134 48"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            class="button__fill"
+            x="0.5"
+            y="0.5"
+            width="133"
+            height="47"
+            rx="23.5"
+          />
+          <rect
+            class="button__stroke"
+            x="0.5"
+            y="0.5"
+            width="133"
+            height="47"
+            rx="23.5"
+          />
+        </svg>
+      }
+
+      @case ('vertical') {
+        <svg
+          class="button__bg"
+          width="38"
+          height="89"
+          viewBox="0 0 38 89"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            class="button__fill"
+            x="0.5"
+            y="0.5"
+            width="37"
+            height="88"
+            rx="18.5"
+          />
+          <rect
+            class="button__stroke"
+            x="0.5"
+            y="0.5"
+            width="37"
+            height="88"
+            rx="18.5"
+          />
+        </svg>
+      }
+    }
+
+    <span class="button__content">
+      @if (icon) {
+        <span class="button__icon" aria-hidden="true">
+          @switch (icon) {
+            @case ('arrow-down') {
+              <svg
+                width="22"
+                height="50"
+                viewBox="0 0 22 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.8284 45.0634L18.7407 38.7604C19.1224 38.4123 19.7065 38.4123 20.0883 38.7604L20.6039 39.2306C21.0388 39.6272 21.0388 40.3118 20.6039 40.7084L11.088 49.3856C10.7062 49.7337 10.1222 49.7337 9.74039 49.3856L0.224551 40.7084C-0.210388 40.3118 -0.210388 39.6272 0.224551 39.2306L0.740163 38.7604C1.12191 38.4123 1.706 38.4123 2.08775 38.7604L9 45.0634V1C9 0.447715 9.44772 0 10 0H10.8284C11.3807 0 11.8284 0.447715 11.8284 1V45.0634Z"
+                />
+              </svg>
+            }
+
+            @case ('chat') {
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 5H20V15H8L4 19V5Z"
+                />
+              </svg>
+            }
+          }
+        </span>
+      }
+
+      @if (text) {
+        <span class="button__label">{{ text }}</span>
+      }
+    </span>
+  </button>
+}
