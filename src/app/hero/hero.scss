@@ -18,7 +18,7 @@
     align-items: center;
 
     .img-container {
-        height: 100%;
+        height: min-content;
         background-image: url("/img/shapes/shape-portrait-bg.svg");
         background-size: contain;
         background-position: center;
@@ -41,7 +41,6 @@
 
     .logo-container {
         text-align: center;
-        /* falls du den Text auch mittig haben möchtest */
 
         .logo-wrapper {
             position: relative;
